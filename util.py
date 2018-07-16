@@ -1,5 +1,5 @@
 import pyramda as r
-from lifted.fn import Function
+from fn import Function
 from functools import wraps
 @r.curry
 def traverse(T,fn,x):
@@ -33,3 +33,10 @@ ex = Function(excepting)
 @r.curry
 def bimap(f,g,x):
     x.bimap(lambda x: Tuple.of(x-10), lambda x: Tuple.of(x+7) ) 
+
+
+@r.curry
+def decorate(decorating_fn,fn_to_decorate):
+    return Function( decorating_fn(fn_to_decorate) )
+
+

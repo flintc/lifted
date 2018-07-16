@@ -1,5 +1,5 @@
 from dataclasses import dataclass 
-from lifted.adt import Monoid, Applicative, Chain
+from adt import Monoid, Applicative, Chain
 from collections import namedtuple
 from typing import Any
 from types import new_class
